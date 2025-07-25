@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>To-Do List Web Application</title>
+</head>
+
+<body>
+
+    <div class="min-h-screen flex items-center justify-center p-4">
+        <div class="card bg-primary text-primary-content w-full max-w-3xl">
+            <div class="card-body text-center">
+                <h1 class="card-title text-neutral-50 font-bold mx-auto">To-Do List</h1>
+                <p class="header-judul text-neutral-50">Mau mencatat apa hari ini?</p>
+                <div class="addNote flex gap-2">
+                    <input type="text" id="noteInput" placeholder="Masukkan note kamu"
+                        class="input input-primary text-neutral-50 flex-1" />
+                    <input type="date" class="input text-neutral-50 h-12 min-h-0" />
+                    <button id="addButton" class="btn h-12 w-12 min-h-0">
+                        <i class="fa-solid fa-plus text-white"></i>
+                    </button>
+                </div>
+                <hr>
+                <div class="part-mid flex gap-2">
+                    <form class="filter">
+                        <input class="btn btn-square" type="reset" value="×" />
+                        <input class="btn" type="radio" name="frameworks" value="all" aria-label="All Tasks" checked />
+                        <input class="btn" type="radio" name="frameworks" value="pending" aria-label="Pending" />
+                        <input class="btn" type="radio" name="frameworks" value="complete" aria-label="Complete" />
+                    </form>
+                    <button id="deleteallBtn" class="btn deleteallBtn text-black">
+                        <i class="fa-solid fa-trash"></i>
+                        <span>DELETE ALL</span>
+                    </button>
+                </div>
+                <hr>
+                <!-- List Note -->
+                <div class="notes-container overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
+                    <table class="table">
+                        <thead>
+                            <tr class="text-neutral-50">
+                                <th class="w-10">NO</th>
+                                <th class="min-w-[200px]">TASK</th>
+                                <th class="w-24">DUE DATE</th>
+                                <th class="w-24">STATUS</th>
+                                <th class="w-24">ACTIONS</th>
+                            </tr>
+                        </thead>
+                        <tbody id="notesList"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script type="module" src="https://unpkg.com/cally"></script>
+</body>
+
+</html>

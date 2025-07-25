@@ -1,0 +1,152 @@
+@import url('https://fonts.cdnfonts.com/css/segoe-ui-7');
+
+* {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.header-judul {
+    margin-bottom: 16px !important;
+}
+
+#notesList td {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+}
+
+.note-cell {
+    max-width: 300px;
+    min-width: 200px;
+}
+
+@media (max-width: 768px) {
+    .table th, .table td {
+        padding: 0.5rem !important;
+    }
+    
+    .note-cell {
+        max-width: 150px;
+    }
+}
+
+.notes-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.notes-container.compact {
+    max-height: 300px;
+}
+
+.notes-container.compact table {
+    font-size: 0.875rem;
+}
+
+.notes-container.compact th, 
+.notes-container.compact td {
+    padding: 0.5rem;
+}
+
+.notes-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.notes-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.notes-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.notes-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+    .notes-container {
+        max-height: 300px;
+    }
+    
+    .notes-container.compact {
+        max-height: 250px;
+    }
+
+    .deleteallBtn {
+        margin-left: auto;
+    }
+}
+
+.deleteallBtn {
+    background-color: #F87272 !important;
+    border: none !important;
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.mr-2 {
+    margin-right: 0;
+}
+
+.status-pending {
+    background-color: #FBBD23 !important;
+    color: black !important;
+    border: none;
+    min-width: 80px;
+}
+
+.status-complete {
+    background-color: #309174 !important;
+    color: black !important;
+    border: none;
+    min-width: 80px;
+}
+
+.action-cell {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.edit-btn {
+    background-color: #FBBD23 !important;
+    border: none;
+    color: black !important;
+}
+
+.complete-btn {
+    background-color: #309174 !important;
+    border: none;
+    color: white !important;
+}
+
+.delete-btn {
+    background-color: #F87272 !important;
+    border: none;
+    color: white !important;
+}
+
+.action-cell button {
+    min-width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter input[type="radio"]:checked {
+    background-color: #3b82f6 !important;
+    color: white !important;
+}
+
+.filter input[type="reset"] {
+    margin-right: 8px;
+}
